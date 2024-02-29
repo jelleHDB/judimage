@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Two package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-29 19:14:50+0000\n"
+"PO-Revision-Date: 2023-12-31 12:33:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.7\n"
+"X-Generator: GlotPress/4.0.0-beta.2\n"
 "Language: nl\n"
 "Project-Id-Version: Themes - Twenty Twenty-Two\n"
 
@@ -545,7 +545,7 @@ msgstr "Illustratie van een vliegende vogel"
 
 #: inc/patterns/header-image-background.php:6
 msgid "Header with image background"
-msgstr "Header met afbeeldingachtergrond"
+msgstr "Header met afbeeldingsachtergrond"
 
 #: inc/patterns/header-image-background-overlay.php:6
 msgid "Header with image background and overlay"
@@ -662,7 +662,7 @@ msgstr "€150"
 
 #: inc/patterns/general-pricing-table.php:79
 msgid "Play a leading role for our community by joining at the Falcon level. This level earns you a seat on our board, where you can help plan future birdwatching expeditions."
-msgstr "Speel een leidende rol voor onze gemeenschap door lid te worden op het valk niveau. Dit niveau geeft je een zetel in ons bestuur, waar je toekomstige vogelexpedities kan helpen plannen."
+msgstr "Speel een leidende rol voor onze community door lid te worden op het Valk niveau. Dit niveau geeft je een zetel in ons bestuur, waar je toekomstige vogel expedities kan helpen plannen."
 
 #: inc/patterns/general-pricing-table.php:75
 msgid "Falcon"
