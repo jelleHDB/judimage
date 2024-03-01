@@ -324,12 +324,28 @@ a:hover {
 }
 
 /* Home */
+.achtergrond-big {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    transition: background-image 0.5s ease-in-out;
+}
+
+
+.homepagina {
+    position: relative;
+    overflow: hidden;
+}
+
+
 .tekst-achtergrond {
     font-size: 50px;
     font-family: $secondFont;
 }
 
 .achtergrond {
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -340,7 +356,8 @@ a:hover {
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    margin-top: 60px;
 }
 
 .bruiloft-home {
@@ -399,4 +416,331 @@ a:hover {
 .knopBruiloft:hover {
     color: $mainColor;
     background-image: linear-gradient( rgba(255, 255, 255, 0.658), rgba(255, 255, 255, 0.596)), url(http://localhost/judimage/wp-content/uploads/2024/02/achtergrond_knop_judimage.png);
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px)  {
+    .bruiloft-div-1 {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        background-size: contain;
+    }
+
+    .vintagePapierMetPlakband  {
+        height: 55vh;
+    }
+
+    .bruiloftButton {
+        top: 8vh;
+    }
+
+    .knopBruiloft {
+        font-size: 18px;
+    }
+
+    .titelPapierBruiloft {
+        font-size: 50px;
+    }
+
+    .namenPapierBruiloft {
+        font-size: 26px;
+    }
+
+    .vintagePapierMetPlakband {
+        max-width: 370px; 
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .bruiloft-div-1 {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        background-size: contain;
+    }
+
+    .vintagePapierMetPlakband  {
+        height: 72vh;
+    }
+
+    .bruiloftButton {
+        top: -12vh;
+    }
+
+    .knopBruiloft {
+        font-size: 14px;
+    }
+
+    .titelPapierBruiloft {
+        font-size: 35px;
+    }
+
+    .namenPapierBruiloft {
+        font-size: 20px;
+    }
+
+    .vintagePapierMetPlakband {
+        max-width: 250px; 
+    }
+}
+
+/* Waarom Judimage Home */
+
+.waaromJudimage {
+    position: relative;
+}
+
+.waaromJudimage-inner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 30px;
+    gap: 10%;
+    position: relative;
+    z-index: 2;
+}
+
+.titel-waaromJudimage {
+    font-family: $secondFont;
+    font-size: 60px;
+    color: white;
+}
+
+.informatie-waaromJudimage {
+    padding: 15vh 0 8vh;
+    
+}
+
+.informatie-waaromJudimage p {
+    font-family: $thirdFont;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.zwarte-lijn {
+    position: absolute;
+    height: 35vh;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    z-index: 1;
+    margin: 0;
+    border:0;
+}
+
+@media only screen and (max-width: 1070px) and (min-width: 600px)  {
+    .waaromJudimage-inner {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .zwarte-lijn {
+        height: 25vh;
+    }
+
+    .waaromJudimage-c2 {
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 599px)  {
+    .waaromJudimage-inner {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .zwarte-lijn {
+        height: 20vh;
+    }
+
+    .waaromJudimage-c2 {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .titel-waaromJudimage {
+        font-size: 40px;
+    }
+
+    .informatie-waaromJudimage p {
+        font-size: 18px;
+    }
+
+    .afbeelding-waaromJudimage {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+/* Portfolio */
+.slideshow-container {
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.slide-button:nth-child(1) {
+    left: 0;
+}
+
+.slide-button:nth-child(2) {
+    right: 0;
+}
+
+.portfolio-home-inner {
+    position: relative;
+}
+
+.portfolio-home-inner img {
+    height: 240px;
+    width: 240px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 240px;
+    width: 240px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+    height: 240px;
+    width: 240px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.img-box:hover img { 
+    transform: scale(1.2);
+}
+
+.img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+}
+
+.img-box:hover {
+    cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+    font-size: 0.8em;
+}
+
+.opacity-low {
+    opacity: 0.5;
+}
+
+.portfolio-home-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 100px auto 0px;
+    padding: 0px 30px 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.titel-portfolio {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 45px 50px;
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-family: $secondFont;
+    font-size: 80px;
+    text-align: center;
+}
+
+.portfolio-home {
+    padding: 120px 0px 100px;
+    position: relative;
+}
+
+.zwarte-lijn-portfolio-home {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.portfolio-home {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.knopDiv {
+    padding-top: 50px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 600px)  {
+    .portfolio-home-inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .portfolio-home-inner {
+        text-align: center;
+    }
+
+    .zwarte-lijn-portfolio-home {
+        height: 35vh !important;
+    }
+}
+
+@media only screen and (max-width: 1070px) and (min-width: 600px)  {
+    .zwarte-lijn-portfolio-home {
+        height: 35vh !important;
+    }
 }
