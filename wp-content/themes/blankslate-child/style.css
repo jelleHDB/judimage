@@ -683,4 +683,325 @@ a:hover {
   .zwarte-lijn-portfolio-home {
     height: 35vh !important;
   }
+}
+/* Home ervaringen */
+.home-ervaringen, .witteLijn-achtergrond {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.witteLijn-achtergrond {
+  padding-bottom: 60vh;
+  background-color: white;
+  border: 0;
+  margin: 0;
+}
+
+.home-ervaringen-inner {
+  max-width: 1400px;
+  width: 100%;
+  padding: 70px 30px;
+  margin: 0 auto;
+  height: 90vh;
+}
+
+.ervaringenHome {
+  display: flex;
+  gap: 5%;
+  padding-top: 10vh;
+}
+
+.titel-ervaringenHome {
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+}
+
+.knopErvaringenHome {
+  text-align: center;
+}
+
+.ervaring-single {
+  flex: 33.33%;
+}
+
+.ervaring-single-naam {
+  font-size: 50px;
+  color: #648269;
+  font-family: "Dancing Script", cursive;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.31), rgba(255, 255, 255, 0.48)), url(http://localhost/judimage/wp-content/uploads/2024/03/bladJudimageReal.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 50px;
+}
+
+.ervaring-single-img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.ervaring-single-info {
+  padding: 15px 30px;
+}
+
+.ervaring-single-info p {
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 700px) {
+  .ervaringenHome {
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10vh 30px 0;
+  }
+  .home-ervaringen-inner {
+    height: 100%;
+  }
+  .ervaring-single {
+    padding-bottom: 10vh;
+  }
+  .ervaring-single-naam {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(http://localhost/judimage/wp-content/uploads/2024/03/bladJudimageReal.png);
+    text-align: center;
+  }
+  .home-ervaringen-inner {
+    position: relative;
+    z-index: 3;
+  }
+  .witteLijn-achtergrond {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  .ervaring-single-info p {
+    background-color: rgba(0, 0, 0, 0.2509803922);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .ervaringenHome {
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10vh 10px 0;
+  }
+  .home-ervaringen-inner {
+    height: 100%;
+  }
+  .ervaring-single {
+    padding-bottom: 10vh;
+  }
+  .ervaring-single-naam {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(http://localhost/judimage/wp-content/uploads/2024/03/bladJudimageReal.png);
+    text-align: center;
+  }
+  .home-ervaringen-inner {
+    position: relative;
+    z-index: 3;
+    padding: 50px 5px;
+  }
+  .witteLijn-achtergrond {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  .ervaring-single-info p {
+    background-color: rgba(0, 0, 0, 0.2509803922);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  .ervaring-single-info {
+    padding: 5px 0px;
+  }
+  .titel-ervaringenHome {
+    padding-top: 5vh;
+    font-size: 50px;
+    padding-bottom: 5vh;
+  }
+}
+@media only screen and (max-width: 399px) {
+  .ervaring-single-naam {
+    font-size: 40px;
+    background-position: unset;
+  }
+}
+/* Home CTA */
+.home-cta {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-cta-inner {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 30px;
+}
+
+.home-cta-info {
+  font-size: 50px;
+  color: white;
+}
+
+.titel-home-cta {
+  font-family: "Dancing Script", cursive;
+  font-size: 85px;
+  padding-top: 5vh;
+}
+
+.div-knop-ctaHome {
+  padding: 10vh 0px;
+  text-align: right;
+}
+
+.knopCtaHome {
+  padding: 15px 30px;
+  font-size: 22px;
+}
+
+.home-cta-images {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.img-cta-home {
+  max-width: 225px;
+  aspect-ratio: 1/1.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 8px solid white;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+  .titel-home-cta {
+    font-size: 55px;
+  }
+  .img-cta-home {
+    max-width: 140px;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .titel-home-cta {
+    font-size: 55px;
+  }
+  .knopCtaHome {
+    font-size: 18px;
+  }
+  .img-cta-home {
+    max-width: 140px;
+  }
+  .home-cta-images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .img-cta-home {
+    max-width: 45%;
+    flex: 50%;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .titel-home-cta {
+    font-size: 55px;
+  }
+  .knopCtaHome {
+    font-size: 18px;
+  }
+  .img-cta-home {
+    max-width: 140px;
+  }
+  .home-cta-images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .img-cta-home {
+    max-width: 100%;
+    flex: 50%;
+  }
+}
+/* Home Instagram */
+.home-insta {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15vh 30px;
+}
+
+.titel-instaHome {
+  font-family: "Dancing Script", cursive;
+  color: #648269;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 84px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.fotos-instaHome {
+  display: flex;
+  gap: 5px;
+}
+
+.instagram-foto-home {
+  max-width: 220px;
+  aspect-ratio: 1/1;
+  border: 5px solid white;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.home-insta-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.knopInstaDiv-home {
+  text-align: center;
+  padding: 15vh 0 5vh;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+  .fotos-instaHome {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .instagram-foto-home {
+    max-width: 270px;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .fotos-instaHome {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .instagram-foto-home {
+    max-width: 270px;
+  }
+  .home-insta {
+    padding: 10vh 5px;
+  }
+  .home-insta-inner {
+    padding: 0 5px;
+  }
+  .titel-instaHome {
+    font-size: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
