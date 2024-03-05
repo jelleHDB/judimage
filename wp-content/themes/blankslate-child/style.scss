@@ -507,10 +507,11 @@ a:hover {
     font-family: $secondFont;
     font-size: 60px;
     color: white;
+    margin-bottom: 40px;
 }
 
 .informatie-waaromJudimage {
-    padding: 15vh 0 8vh;
+    padding: 0vh 0 8vh;
     
 }
 
@@ -614,6 +615,7 @@ a:hover {
 
 .portfolio-home-inner {
     position: relative;
+    top: 105vh;
 }
 
 .portfolio-home-inner img {
@@ -1101,4 +1103,12 @@ a:hover {
     .titel-instaHome {
         font-size: 40px;
     }
+}
+
+.titelTest {
+    font-size: 60px;
+}
+
+.rellax {
+    display: block;
 }

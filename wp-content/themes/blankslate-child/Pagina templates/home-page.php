@@ -11,7 +11,7 @@
 <?php get_header(); ?>
 
 <div class="achtergrond-big" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('bigImageBackground-home_1'); ?>)">
-    <div class="achtergrond achtergrond-1">
+    <div class="achtergrond achtergrond-1 rellax" data-rellax-speed="-5">
         <div class="bruiloft-home">
             <div class="bruiloft-div-1" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('bruiloft_afbeelding-home_1'); ?>)">
                 <div class="vintagePapierMetPlakband" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('vintage_papier_met_plakband-home'); ?>)">
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="achtergrond achtergrond-2">
+    <div class="achtergrond achtergrond-2 rellax" data-rellax-speed="2" data-rellax-zindex="5">
         <div class="bruiloft-home">
             <div class="bruiloft-div-1" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('bruiloft_afbeelding-home_2'); ?>)">
                 <div class="vintagePapierMetPlakband" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('vintage_papier_met_plakband-home_2'); ?>)">
@@ -72,11 +72,11 @@ $(document).ready(function() {
 });
 </script>
 
-<div class="waaromJudimage">
-    <hr class="zwarte-lijn"> 
+<div class="waaromJudimage rellax" data-rellax-speed="0">
+    <hr class="zwarte-lijn rellax" data-rellax-speed="1"> 
     <div class="waaromJudimage-inner">
         <div class="waaromJudimage-c1">
-            <h2 class="titel-waaromJudimage"><?php the_field( 'titel-waaromJudimage-home' ); ?></h2>
+            <h2 class="titel-waaromJudimage rellax" data-rellax-speed="1"><?php the_field( 'titel-waaromJudimage-home' ); ?></h2>
             <div class="informatie-waaromJudimage"><?php the_field( 'informatie-waaromJudimage-home' ); ?></div>
             <?php $knop_waaromJudimage_home = get_field( 'knop-waaromJudimage-home' ); ?>
             <?php if ( $knop_waaromJudimage_home ) : ?>
@@ -92,13 +92,13 @@ $(document).ready(function() {
 </div>
 <div class="portfolio-home" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('wit_achtergrond-portfolio-home'); ?>)">
     <hr class="zwarte-lijn zwarte-lijn-portfolio-home" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('achtergrond_afbeelding-portfolio-home'); ?>)">
-    <h2 class="titel-portfolio"><?php the_field( 'titel-portfolio-home' ); ?></h2>
-    <div class="portfolio-home-inner">
+    <h2 class="titel-portfolio rellax" data-rellax-speed="0"><?php the_field( 'titel-portfolio-home' ); ?></h2>
+    <div class="portfolio-home-inner rellax" data-rellax-speed="4">
         <?php if ( have_rows( 'portfolio-herhaler-home' ) ) : ?>
             <?php while ( have_rows( 'portfolio-herhaler-home' ) ) : the_row(); ?>
                 <div class="img-box">
                     <?php if ( get_sub_field( 'afbeelding-portfolio-home' ) ) : ?>
-                        <img src="<?php the_sub_field( 'afbeelding-portfolio-home' ); ?>" />
+                        <img class="portfolio-home-img-rep" src="<?php the_sub_field( 'afbeelding-portfolio-home' ); ?>" />
                     <?php endif ?>
                     <?php if ( have_rows( 'informatie_in_afbeelding-portfolio-home' ) ) : ?>
                         <?php while ( have_rows( 'informatie_in_afbeelding-portfolio-home' ) ) : the_row(); ?>
@@ -159,7 +159,7 @@ $(document).ready(function() {
 <div class="home-cta" style="background-image: linear-gradient( rgb(0 0 0 / 60%), rgb(0 0 0 / 60%) ), url(<?php the_field('achtergrond_afbeelding-ctaHome'); ?>)">
     <div class="home-cta-inner">
         <div class="home-cta-info">
-            <h2 class="titel-home-cta"><?php the_field( 'titel-home-cta' ); ?></h2>
+            <h2 class="titel-home-cta"><span class="rellax" data-rellax-speed="0"><?php the_field( 'titel-home-cta' ); ?></span></h2>
             <div class="div-knop-ctaHome">
                 <?php $knop_ctaHome = get_field( 'knop-ctaHome' ); ?>
                 <?php if ( $knop_ctaHome ) : ?>
@@ -210,6 +210,22 @@ $(document).ready(function() {
         </div>
     </div>
 </div>
+
+<!-- Scripts -->
+<script src="../judimage/wp-content/themes/blankslate-child/node_modules/rellax/rellax.min.js"></script>
+<script src="../judimage/wp-content/themes/blankslate-child/node_modules/simple-parallax-js/src/simpleParallax.js"></script>
+<script>
+    var rellax = new Rellax('.rellax', {
+        horizontal: true,
+    });
+
+    var image = document.getElementsByClassName('afbeelding-waaromJudimage');
+    new simpleParallax(image, {
+        overflow: true,
+        orientation: 'right'
+    });
+
+</script>
 
 
 <?php get_footer(); ?>
