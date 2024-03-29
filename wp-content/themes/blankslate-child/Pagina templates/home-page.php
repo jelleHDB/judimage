@@ -126,10 +126,10 @@ $(document).ready(function() {
 
 <div class="home-ervaringen" style="background-image: linear-gradient( rgb(255 255 255 / 57%), rgb(255 255 255 / 54%) ), url(<?php the_field('achtergrond_afbeelding-ervaringenHome'); ?>)">
     <div class="home-ervaringen-inner">
-        <h2 class="titel-ervaringenHome"><?php the_field( 'titel-ervaringenHome' ); ?></h2>
+        <h2 class="titel-ervaringenHome rellax" data-rellax-speed="1.5"><?php the_field( 'titel-ervaringenHome' ); ?></h2>
         <?php $knop_ervaringenHome = get_field( 'knop-ervaringenHome' ); ?>
         <?php if ( $knop_ervaringenHome ) : ?>
-            <div class="knopErvaringenHome">
+            <div class="knopErvaringenHome rellax" data-rellax-speed="-1.5">
                 <a class="knop-ervaringenHome knopBruiloft" href="<?php echo esc_url( $knop_ervaringenHome['url'] ); ?>" target="<?php echo esc_attr( $knop_ervaringenHome['target'] ); ?>"><?php echo esc_html( $knop_ervaringenHome['title'] ); ?></a>
             </div>
         <?php endif; ?>
@@ -138,11 +138,11 @@ $(document).ready(function() {
                 <?php while ( have_rows( 'ervaringen-repeaterHome' ) ) : the_row(); ?>
                     <?php if ( have_rows( 'groupHome-ervaring' ) ) : ?>
                         <?php while ( have_rows( 'groupHome-ervaring' ) ) : the_row(); ?>
-                            <div class="ervaring-single">
+                            <div class="ervaring-single rellax" data-rellax-speed="-0.5">
                                 <?php if ( get_sub_field( 'GroupHome-afbeelding' ) ) : ?>
                                     <img class="ervaring-single-img" src="<?php the_sub_field( 'GroupHome-afbeelding' ); ?>" />
                                 <?php endif ?>
-                                <h3 class="ervaring-single-naam"><?php the_sub_field( 'GroupHome-namen' ); ?></h3>
+                                <h3 class="ervaring-single-naam rellax" data-rellax-speed="0"><?php the_sub_field( 'GroupHome-namen' ); ?></h3>
                                 <div class="ervaring-single-info"><?php the_sub_field( 'GroupHome-informatie' ); ?></div>
                             </div>
                         <?php endwhile; ?>
@@ -159,7 +159,7 @@ $(document).ready(function() {
 <div class="home-cta" style="background-image: linear-gradient( rgb(0 0 0 / 60%), rgb(0 0 0 / 60%) ), url(<?php the_field('achtergrond_afbeelding-ctaHome'); ?>)">
     <div class="home-cta-inner">
         <div class="home-cta-info">
-            <h2 class="titel-home-cta"><span class="rellax" data-rellax-speed="0"><?php the_field( 'titel-home-cta' ); ?></span></h2>
+            <h2 class="titel-home-cta"><span class="rellax" data-rellax-speed="1"><?php the_field( 'titel-home-cta' ); ?></span></h2>
             <div class="div-knop-ctaHome">
                 <?php $knop_ctaHome = get_field( 'knop-ctaHome' ); ?>
                 <?php if ( $knop_ctaHome ) : ?>
@@ -190,7 +190,7 @@ $(document).ready(function() {
 
 <div class="home-insta" style="background-image: linear-gradient( rgb(0 0 0 / 0%), rgb(0 0 0 / 0%) ), url(<?php the_field('achtergrond_afbeelding-instaHome'); ?>)">
     <div class="home-insta-inner">
-        <h2 class="titel-instaHome"><?php the_field( 'titel-instaHome' ); ?></h2>
+        <h2 class="titel-instaHome rellax" data-rellax-speed="2"><?php the_field( 'titel-instaHome' ); ?></h2>
         <div class="fotos-instaHome">
             <?php if ( have_rows( 'fotos_instagram-instaHome' ) ) : ?>
                 <?php while ( have_rows( 'fotos_instagram-instaHome' ) ) : the_row(); ?>
@@ -224,6 +224,42 @@ $(document).ready(function() {
         overflow: true,
         orientation: 'right'
     });
+
+    var image1 = document.getElementsByClassName('img-cta-home-1');
+    new simpleParallax(image1, {
+        overflow: true,
+        orientation: 'right',
+        delay: 3
+    });
+
+    var image2 = document.getElementsByClassName('img-cta-home-2');
+    new simpleParallax(image2, {
+        overflow: true,
+        orientation: 'left',
+        delay: 2.2
+    });
+
+    var image3 = document.getElementsByClassName('img-cta-home-3');
+    new simpleParallax(image3, {
+        overflow: true,
+        orientation: 'right',
+        delay: 1.4
+    });
+
+    var image4 = document.getElementsByClassName('img-cta-home-4');
+    new simpleParallax(image4, {
+        overflow: true,
+        orientation: 'left',
+        delay: .9
+    });
+
+    var imageInsta = document.getElementsByClassName('instagram-foto-home');
+    new simpleParallax(imageInsta, {
+        overflow: true,
+        orientation: 'left',
+        delay: 2
+    });
+
 
 </script>
 

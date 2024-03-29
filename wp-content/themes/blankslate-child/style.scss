@@ -22,7 +22,7 @@ $thirdColor : grey;
 $mainFont : "Raleway", sans-serif;
 $secondFont : "Dancing Script", cursive;
 $thirdFont : "Cabin Sketch", sans-serif;
-
+$fourthFont : "Poppins", sans-serif;
 
 p, a {
     font-family: $mainFont;
@@ -168,7 +168,7 @@ a:hover {
     max-width: 1340px;
     width: 100%;
     padding: 10px 0;
-    margin: 30px auto;
+    margin: 30px auto 0;
     border-top: 1px solid #ffffff1f;
     color: white;
     font-size: 10px;
@@ -356,7 +356,7 @@ a:hover {
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin-top: 60px;
 }
 
@@ -400,20 +400,21 @@ a:hover {
     width: 100%;
     text-align: center;
     position: relative;
-    top: 30vh;
+    top: 25vh;
 }
 
-.knopBruiloft {
+.knopBruiloft, .wpcf7-submit {
     font-size: 20px;
     font-weight: 600;
     font-family: $mainFont;
     padding: 10px 20px;
     border-radius: 5px;
+    border: 0px;
     color: $secondColor;
     background-image: linear-gradient( #648269ad, #648269a3 ), url(http://localhost/judimage/wp-content/uploads/2024/02/achtergrond_knop_judimage.png);
 }
 
-.knopBruiloft:hover {
+.knopBruiloft:hover, .wpcf7-submit:hover {
     color: $mainColor;
     background-image: linear-gradient( rgba(255, 255, 255, 0.658), rgba(255, 255, 255, 0.596)), url(http://localhost/judimage/wp-content/uploads/2024/02/achtergrond_knop_judimage.png);
 }
@@ -728,6 +729,7 @@ a:hover {
     .portfolio-home-inner {
         display: flex;
         flex-wrap: wrap;
+        margin-top: 0px;
     }
 }
 
@@ -783,10 +785,14 @@ a:hover {
     text-align: center;
     padding-top: 20vh;
     padding-bottom: 10vh;
+    position: relative;
+    top: 45vh;
 }
 
 .knopErvaringenHome {
     text-align: center;
+    position: relative;
+    bottom: 60vh;
 }
 
 .ervaring-single {
@@ -829,11 +835,20 @@ a:hover {
         flex-direction: column;
         max-width: 700px;
         margin: 0 auto;
-        padding: 10vh 30px 0;
+        padding: 15vh 30px 0;
+    }
+
+    .titel-ervaringenHome {
+        padding-bottom: 0;
+    }
+
+    .knopErvaringenHome {
+        bottom: 75vh;
     }
 
     .home-ervaringen-inner {
         height: 100%;
+        padding: 70px 30px 150px;
     }
 
     .ervaring-single {
@@ -945,6 +960,8 @@ a:hover {
     font-family: $secondFont;
     font-size: 85px;
     padding-top: 5vh;
+    position: relative;
+    top: 50vh;
 }
 
 .div-knop-ctaHome {
@@ -960,7 +977,7 @@ a:hover {
 .home-cta-images {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 70px;
 }
 
 .img-cta-home {
@@ -973,10 +990,20 @@ a:hover {
 @media only screen and (max-width: 1200px) and (min-width: 700px)  {
     .titel-home-cta {
         font-size: 55px;
+        top: 100vh;
+        text-align: center;
     }
 
     .img-cta-home {
         max-width: 140px;
+    }
+
+    .home-cta-images {
+        gap: 30px;
+    }
+
+    .img-cta-home {
+        transform: unset !important;
     }
 }
 
@@ -1045,6 +1072,8 @@ a:hover {
     letter-spacing: 0em;
     text-align: center;       
     padding-bottom: 5vh;
+    position: relative;
+    top: 110vh;
 }
 
 .fotos-instaHome {
@@ -1080,6 +1109,10 @@ a:hover {
     .instagram-foto-home {
         max-width: 270px;
     }
+
+    .titel-instaHome {
+        top: 185vh;
+    }
 }
 
 @media only screen and (max-width: 699px)  {
@@ -1111,4 +1144,1436 @@ a:hover {
 
 .rellax {
     display: block;
+}
+
+@media only screen and (max-width: 1300px) {
+    .titel-home-cta {
+        position: unset !important;
+    }
+
+    .titel-home-cta .rellax {
+        transform: unset !important;
+    }
+
+    .titel-instaHome {
+        position: unset !important;
+        transform: unset !important;
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+    .instagram-foto-home {
+        transform: unset !important;
+    }
+
+    .titel-ervaringenHome {
+        transform: unset !important;
+        top: unset !important;
+    }
+
+    .portfolio-home-inner {
+        transform: unset !important;
+        top: 10vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .knopErvaringenHome {
+         bottom: unset !important;
+         transform: unset !important;
+    }
+
+    .home-ervaringen-inner {
+        padding: 50px 5px 200px;
+    }
+
+    .img-cta-home {
+        transform: unset !important;
+    }
+}
+
+/* Trouwlocaties */
+
+/* Trouwlocaties informatie */
+.achtergrondGrootTrouwLocatie {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.afbeelding-trouwlocatie1-links-1 {
+    width: 100%;
+    max-width: 450px;
+    max-height: 430px;
+    height: 430px;
+    object-fit: cover;
+    position: absolute;
+    margin-top: -50px;
+}
+.afbeelding-trouwlocatie1-links-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    max-width: 450px;
+    width: 100%;
+    height: 500px;
+    border: 10px solid white;
+    object-fit: cover;
+}
+
+.afbeeldingTrouwLocatiePlakBandDiv {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    max-width: 450px;
+    width: 100%;
+    height: 500px;   
+    text-align: center;
+}
+
+.plakband_afbeelding-trouwLocaties_1 {
+    position: relative;
+    z-index: 3;
+    bottom: 15px;
+}
+
+.trouwlocatie-1-inner {
+    display: flex;
+    gap: 5%;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 30px 120px;
+}
+
+.trouwlocatie-1-c1 {
+    flex: 70%;
+    position: relative;
+}
+
+.trouwlocatie-1-c2 {
+    flex: 30%;
+}
+
+.trouwlocatie-1-c2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.informatieTrouwLocatie-1 p {
+    color: black;
+    font-family: $thirdFont;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    margin: 35px 0px;
+    text-align: justify;
+}
+
+.titel-informatieTrouwLocatie-1 {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 59px;
+    letter-spacing: 0em;
+    text-align: right;   
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 30px 0px;
+    font-family: $mainFont;
+    position: relative;
+    z-index: 3;
+}
+
+.netteFont {
+    font-family: $secondFont;
+    padding-right: 15px;
+    font-size: 70px;
+}
+
+.trouwlocatie-1-c1 {
+    display: flex;
+}
+
+.div-knopInformatieTrouwLocatie-1 {
+    margin-top: 40px;
+    position: relative;
+    bottom: 12px;
+}
+
+@media only screen and (max-width: 999px) and (min-width: 600px)  {
+    .trouwlocatie-1-inner {
+        flex-direction: column;
+    }
+
+    .afbeelding-trouwlocatie1-links-1 {
+        position: unset;
+        margin-top: 0;
+    }
+
+    .afbeeldingTrouwLocatiePlakBandDiv {
+        position: relative;
+        top: 50px;
+    }
+
+    .afbeelding-trouwlocatie1-links-2 {
+        position: unset;
+        height: unset;
+    }
+
+    .trouwlocatie-1-c1 {
+        align-items: center;
+    }
+
+    .afbeelding-trouwlocatie1-links-1 {
+        height: unset;
+        max-height: unset;
+    }
+
+    .plakband_afbeelding-trouwLocaties_1 {
+        bottom: unset;
+        top: 25px;
+    }
+
+    .titel-informatieTrouwLocatie-1 {
+        text-align: center;
+        padding: 120px 30px 50px;
+    }
+
+    .trouwlocatie-1-c1 {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .afbeelding-trouwlocatie1-links {
+        transform: unset !important;
+    }
+}
+
+@media only screen and (max-width: 599px)  {
+    .trouwlocatie-1-inner {
+        flex-direction: column;
+    }
+
+    .afbeelding-trouwlocatie1-links-1 {
+        position: unset;
+        margin-top: 0;
+    }
+
+    .afbeeldingTrouwLocatiePlakBandDiv {
+        position: relative;
+        top: 50px;
+    }
+
+    .afbeelding-trouwlocatie1-links-2 {
+        position: unset;
+        height: unset;
+    }
+
+    .trouwlocatie-1-c1 {
+        align-items: center;
+    }
+
+    .afbeelding-trouwlocatie1-links-1 {
+        height: unset;
+        max-height: unset;
+    }
+
+    .plakband_afbeelding-trouwLocaties_1 {
+        bottom: unset;
+        top: 25px;
+    }
+
+    .titel-informatieTrouwLocatie-1 {
+        text-align: center;
+        padding: 120px 30px 50px;
+    }
+
+    .trouwlocatie-1-c1 {
+        flex-direction: column;
+    }
+
+    .titel-informatieTrouwLocatie-1 {
+        font-size: 40px;
+    }
+
+    .netteFont {
+        font-size: 55px;
+    }
+
+    .div-knopInformatieTrouwLocatie-1 .knopBruiloft {
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 399px)  {
+    .netteFont {
+        font-size: 30px;
+    }
+    .normaalFont {
+        font-size: 25px;
+    }
+}
+
+.achtergrondGrootTrouwLocatie {
+    transition: background-image 0.5s ease-in-out;
+}
+
+.trouwlocatie-1, .trouwlocatie-2 {
+    background-color: #ffffff85;
+}
+
+.afbeedling-trouwlocatie-2 {
+    top: 85vh !important;
+}
+
+.wpcf7-response-output {
+    font-family: $mainFont;
+}
+
+@media only screen and (min-width: 999px)  {
+    .afbeelding-trouwlocatie1-links-1 {
+        top: 60vh;
+        display: unset !important;
+    }
+}
+
+/* Trouwlocatie Contact Formulier */
+.formulier-trouwlocatie {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 115vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.formulier-trouwlocatie-inner {
+    background-color: white;
+    max-width: 100%;
+    width: 1150px;
+    padding: 5vh 30px;
+    margin: 0 auto;
+}
+
+.contactForm-trouwLocatie {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.titel-cfTrouwLocatie {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 30px 0;
+}
+
+.titel-cfTrouwLocatie { 
+    font-family: $secondFont;
+    color: $mainColor;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.cfTrouwlocatie-column p {
+    display: flex;
+    gap: 5%;
+}
+
+.cfTrouwlocatie-column {
+    margin-bottom: 30px;
+}
+
+.contactForm-trouwLocatie textarea, .contactForm-trouwLocatie label, .cfTrouwlocatie-column input {
+    width: 100%;
+    margin-top: 5px;
+    background: transparent;
+    border: 0px;
+    padding: 8px 5px;
+}
+
+.cfTrouwlocatie-column input, .contactForm-trouwLocatie textarea {
+    border-bottom: 2px solid black;
+}
+
+.wpcf7-text:focus, .wpcf7-email:focus, .wpcf7-tel:focus, .wpcf7-textarea:focus {
+    outline: none;
+}
+
+.wpcf7-text, .wpcf7-email, .wpcf7-tel, .wpcf7-textarea { 
+    padding: 0 !important;
+    font-size: 18px;
+    padding-bottom: 10px !important;
+}
+
+.wpcf7-textarea {
+    padding-left: 5px !important;
+}
+
+.contactForm-trouwLocatie textarea {
+    font-family: $thirdFont;
+    height: 40px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.contactForm-trouwLocatie label {
+    font-family: $thirdFont;
+    color: $mainColor;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+
+.contactForm-trouwLocatie textarea::placeholder {
+    font-size: 18px;
+}
+
+.wpcf7-submit {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.wpcf7-submit:hover {
+    transition: all 0.3s ease-in-out !important;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px)  {
+    .titel-cfTrouwLocatie {
+        font-size: 30px;
+    }
+
+    .cfTrouwlocatie-column p {
+        flex-direction: column;
+    }
+
+    .wpcf7-submit {
+        font-size: 12px;
+    }
+
+    .formulier-trouwlocatie {
+        height: unset;
+        padding: 5vh 30px;
+    }
+}
+
+/* Waarom Judimage */
+.titel-waaromJudimage-paginaZelf {
+    margin-bottom: 70px;
+}
+
+.afkomstJudimage {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.afkomstJudimage-inner {
+    display: flex;
+    gap: 5%;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15vh 30px;
+    height: 100vh;
+}
+
+.afkomstJudimage-c1 {
+    display: flex;
+    align-items: center;
+    background-position: center left;
+    background-repeat: no-repeat;
+    flex: 30%;
+    background-size: contain;
+}
+
+.informatie-afkomst-waaromJudimage p {
+    font-family: $thirdFont;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 29.28px;
+    text-align: left;
+}
+
+.informatie-afkomst-waaromJudimage {
+    max-width: 350px;
+    width: 100%;
+    margin-left: 90px;
+}
+
+.afkomstJudimage-c2 {
+    flex: 50%;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: right;
+}
+
+@media only screen and (max-width: 1380px) and (min-width: 800px)  {
+    .afkomstJudimage-inner {
+        height: unset !important;
+        flex-direction: column !important;
+    }
+
+    .afkomstJudimage-c1 {
+        padding: 110px 0;
+        background-position: center;
+        justify-content: center;
+    }
+
+    .informatie-afkomst-waaromJudimage {
+        margin-left: 0px;
+    }
+
+    .afkomstJudimage-c2 {
+        background-position: center;
+        background-size: contain;
+        padding-bottom: 450px;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 799px)  {
+    .afkomstJudimage-inner {
+        height: unset !important;
+        flex-direction: column !important;
+    }
+
+    .afkomstJudimage-c1 {
+        padding: 110px 0;
+        background-position: center;
+        justify-content: center;
+    }
+
+    .informatie-afkomst-waaromJudimage {
+        margin-left: 0px;
+    }
+
+    .afkomstJudimage-c2 {
+        background-position: center;
+        background-size: contain;
+        padding-bottom: 850px;
+        margin-bottom: -200px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .afbeeldingKlein-afkomst-waaromJudimage {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .informatie-afkomst-waaromJudimage p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 450px)  {
+    .afkomstJudimage-c2 {
+        padding-bottom: 650px;
+        margin-bottom: -400px;
+    }
+}
+
+@media only screen and (max-width: 499px)  {
+    .afkomstJudimage-c1 {
+        background-size: 500px;
+    }
+
+    .informatie-afkomst-waaromJudimage {
+        padding: 0 10px;
+    }
+}
+
+.waaromGroot-judimage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.waaromGroot-judimage-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.informatie-waaromGroot {
+    max-width: 500px;
+    width: 100%;
+}
+
+.informatie-waaromGroot p {
+    font-family: $thirdFont;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35.13px;
+    text-align: left;
+    color: white;
+}
+
+@media only screen and (max-width: 550px)  {
+    .informatie-waaromGroot p {
+        font-size: 24px;
+    }
+
+    .waaromJudimage-c1 {
+        margin-top: 75px;
+    }
+
+    .waaromJudimage .zwarte-lijn {
+        height: 30vh;
+    }
+
+    .informatie-waaromJudimage {
+        padding: 5vh 0 8vh;
+    }
+}
+
+@media only screen and (max-width: 330px)  {
+    .waaromJudimage .zwarte-lijn {
+        height: 37vh;
+    }
+}
+
+@media only screen and (min-width: 1070px)  {
+    .afbeelding-waaromJudimage {
+        margin-top: 75px;
+    }
+}
+
+@media only screen and (max-width: 1069px)  and (min-width: 600px)  {
+    .waaromJudimage-c1 {
+        margin-top: 100px;
+    }
+
+    .zwarte-lijn {
+        height: 32vh;
+    }
+}
+
+@media only screen and (max-width: 707px)  and (min-width: 600px)  {
+    .zwarte-lijn {
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 600px)  and (min-width: 500px)  {
+    .waaromJudimage-c1 {
+        margin-top: 100px;
+    }
+
+    .zwarte-lijn {
+        height: 32vh;
+    }
+}
+
+img.afbeeldingKlein-afkomst-waaromJudimage {
+    max-width: 400px;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.afbeeldingKlein-afkomst-waaromJudimage_2 {
+    border: 8px solid white;
+}
+
+.informatie-afkomst-waaromJudimage_2 p {
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 470px) {
+    .informatie-afkomst-waaromJudimage_2 p {
+        font-size: 15px;
+    }
+}
+
+/* Lagen afbeeldingen ballonnen */
+
+.judimage-ballonnen {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.judimage-ballonnen-inner {
+    position: relative;
+    height: 100vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.ballonnnen_laag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.informatie-ballonnen {
+    position: relative;
+    top: 110vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.informatie-ballonnen p {
+    color: white;
+    font-family: $thirdFont;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35.13px;
+}
+
+.ballonnen_laag_2 {
+    top: 105vh;
+}
+
+.ballonnen_laag_3 {
+    top: 140vh;
+}
+
+.ballonnen_laag_4 {
+    top: 330vh;
+}
+
+.titel-waaromInsta {
+    top: 90vh ;
+}
+
+@media only screen and (max-width: 1460px) {
+    .ballonnnen_laag {
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 1380px) and (min-width: 800px) {
+    .informatie-ballonnen {
+        top: 165vh;
+    }
+
+    .ballonnen_laag_2 {
+        top: 150vh;
+    }
+
+    .ballonnen_laag_3 {
+        top: 225vh;
+    }
+
+    .ballonnen_laag_4 {
+        top: 640vh;
+    }
+
+    .titel-waaromInsta {
+        top: 150vh;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .ballonnnen_laag {
+        display: none;
+        transform: unset !important;
+    }
+
+    .informatie-ballonnen {
+        transform: unset !important;
+        top: 40% !important;
+    }
+
+    .fotos-instaWaarom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.container-shoots {
+    position: relative;
+    width: 50%;
+  }
+  
+.shoot-image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle-shoot {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container-shoots:hover .shoot-image {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.container-shoots:hover .middle-shoot {
+    opacity: 1;
+}
+
+.text-shoot {
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: $secondFont;
+    padding: 10px 12px;
+}
+
+.titelPortfolioSlider {
+    padding: 270px 30px 220px;
+    text-align: center;
+    color: white;
+    font-family: $secondFont;
+    font-weight: 800;
+    font-size: 120px;
+}
+
+.portfolio-slider {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portfolio-inner {
+    max-width: 1600px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container-shoots {
+    flex: 30%;
+    max-width: 500px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1070px) and (min-width: 600px) {
+    .container-shoots {
+        flex: 48%;
+    }
+
+    .titelPortfolioSlider {
+        padding: 210px 30px 130px;
+        font-size: 80px;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .container-shoots {
+        flex: 98%;
+    }
+
+    .container-shoots {
+        max-width: 100%;
+    }
+
+    .titelPortfolioSlider {
+        padding: 180px 30px 90px;
+        font-size: 60px;
+    }
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+  
+.image-item img {
+    width: 100%;
+    border-radius: 5px;
+    max-width: 245px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+  
+.image-item img:hover {
+    transform: scale(0.97);
+}
+  
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+}
+
+.image-item {
+    display: flex;
+    gap: 5px; 
+    flex-wrap: wrap;
+    max-width: 1060px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 30px;
+}
+  
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 5px;
+}
+  
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0px 0px 6px 0px;
+    top: 35px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+  
+button {
+    background: none;
+    border: none;
+}
+  
+.close:hover {
+    transform: scale(0.9);
+}
+  
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    white-space: pre-line;
+    text-align: center;
+    color: #ccc;
+    padding: 25px 0px 42px 0px;
+    height: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s;
+}
+
+.slider-shoot {
+    margin: 150px auto 0;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 30px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titelSlider-shoot {
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    font-size: 80px;
+    font-family: $secondFont;
+}
+
+.shoot-informatie {
+    max-width: 1060px;
+    width: 100%;
+    margin: 80px auto 25px;
+    padding: 0 30px;
+}
+
+.titelInformatie-shoot {
+    font-family: $mainFont;
+    font-size: 42px;
+}
+
+.informatie-shoot {
+    margin-top: 10px;
+}
+
+.informatie-shoot p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 599px) {
+    .titelSlider-shoot {
+        padding: 100px 0px;
+        font-size: 52px;
+    }
+
+    .titelInformatie-shoot {
+        font-size: 32px;
+    }
+
+    .informatie-shoot p {
+        font-size: 18px;
+    }
+}
+
+/* Contact pagina */
+.sliderContact {
+    padding: 250px 0 350px;
+    background-color: #b3d7b9;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sliderContact-inner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.titelSliderContact {
+    font-family: $fourthFont;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.informatieSliderContact {
+    font-family: $fourthFont;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contactInformatie-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 5%;
+    position: relative;
+    bottom: 230px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 22px #acadab82;
+}
+
+.contactInformatie-c1 {
+    flex: 40%;
+    background-color: #84c790;
+    padding: 50px 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.contactInformatie-c2 {
+    flex: 75%;
+    padding: 30px 100px;
+}
+
+.titelInformatieContact {
+    font-family: $fourthFont;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 28px;
+    color: white;
+    letter-spacing: 0.4px;
+}
+
+.infoInformatieContact {
+    color: white;
+    font-family: $fourthFont;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 15px 0 30px;
+    line-height: 1.5;
+}
+
+.telContact, .mailContact, .kvk-nummerContact, .btw-nummerContact {
+    display: block;
+    font-family: $fourthFont;
+    color: white !important;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.contactInformatie-c1 i {
+    margin-right: 10px;
+}
+
+.bottom-left-quarter-circle {
+    border-radius: 350px 0 30px 0px;
+    background-color: #73ab7d;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media only screen and (min-width: 1600px) {
+    .bottom-left-quarter-circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.contactInformatie {
+    margin: 0 30px;
+    margin-bottom: -100px;
+}
+
+/* Contact formulier styling op contact pagina */
+.contactFormulier input, .contactFormulier span, .contactFormulier p, .contactFormulier textarea {
+    width: 100%;
+}
+
+.contactFormulier .wpcf7-text, .contactFormulier textarea {
+    border: 0px;
+    border-bottom: 1px solid black !important;
+    margin-bottom: 30px;
+}
+
+.contactFormulier textarea {
+    height: 100px;
+}
+
+.contactform-contact-div {
+    gap: 50px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.contactFormulier label {
+    font-family: $fourthFont;
+    font-weight: 400;
+    color: #838383;
+}
+
+@media only screen and (max-width: 1599px) {
+    .bottom-left-quarter-circle {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    .contactInformatie-c2 {
+        padding: 30px 40px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .contactInformatie-inner {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .titelSliderContact {
+        font-size: 34px;
+    }
+
+    .informatieSliderContact {
+        font-size: 18px;
+    }
+
+    .contactform-contact-div {
+        gap: unset !important;
+        flex-direction: column;
+    }
+
+    .contactInformatie-c2 {
+        padding: 30px 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .infoInformatieContact {
+        font-size: 16px;
+    }
+
+    .telContact, .mailContact, .kvk-nummerContact, .btw-nummerContact {
+        font-size: 16px;
+    }
+}
+
+.telContact:hover, .mailContact:hover {
+    text-decoration: underline;
+}
+
+.kvk-nummerContact {
+    margin-bottom: 5px !important;
+}
+
+.btw-nummerContact {
+    padding-left: 27px !important;
+}
+
+.googleMaps iframe {
+    width: 100%;
+}
+
+/* Fotoshoots */
+.informatie-fotoshoots-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.afbeelding-fotoshoot {
+    width: 100%;
+}
+
+.informatie-fotoshoots-c1, .informatie-fotoshoots-c2 {
+    flex: 50%;
+}
+
+.informatie-fotoshoot {
+    font-size: 18px;
+    
+}
+
+.informatie-fotoshoot p {
+    margin-bottom: 15px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.informatie-fotoshoots-c2 {
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, .1));
+}
+
+.informatie-fotoshoots-inner-2 {
+    flex-direction: row-reverse;
+    padding-bottom: 80px;
+}
+
+.titel-infoFotoshoots {
+    font-size: 46px;
+    font-family: $mainFont;
+}
+
+.knop-fotoshoots {
+    padding: 10px 25px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius:20px;   
+    color: #fff;
+    border: 3px solid $mainColor;
+    background-image: -webkit-linear-gradient(30deg, $mainColor 50%, transparent 50%);
+    background-image: linear-gradient(30deg, $mainColor 50%, transparent 50%);
+    background-size: 520px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: background 300ms ease-in-out;
+}
+
+.knop-fotoshoots:hover {
+    background-position: 100%;
+    color: $mainColor;
+}
+
+@media only screen and (max-width: 930px) {
+    .informatie-fotoshoots-inner {
+        flex-direction: column;
+    }
+
+    .afbeelding-fotoshoot {
+        transform: unset !important;
+        transition: unset !important;
+        margin-top: 50px;
+    }
+}
+
+/* Blog pagina */
+.blog-pagina-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 200px auto 80px;
+    padding: 0 30px;
+}
+
+.titelsKnopBlog-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titelBlog {
+    font-family: $fourthFont;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.titelBlogLicht {
+    padding-left: 8px;
+}
+
+.blogs {
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    margin-top: 5vh;
+}
+
+.blog-post {
+    flex: 30%;
+    max-width: 340px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.post-thumbnail {
+    height: 200px;
+}
+
+.post-title {
+    padding: 20px;
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+    font-family: $fourthFont;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.post-meta {
+    padding: 10px 20px;
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+    border-radius: 0px 0px 10px 10px;
+    color: black;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-user, .fa-clock-o  {
+    padding-right: 5px;
+}
+
+.page-numbers {
+    padding: 10px 18px;
+    background-color: #648269;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid #648269;
+    font-family: $fourthFont;
+}
+
+span.page-numbers.current, .page-numbers:hover {
+    background-color: transparent;
+    color: #648269;
+}
+
+.single-post article header, .comment-form, .entry-footer, #reply-title {
+    display: none;
+}
+
+.entry-content {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    max-width: 1400px;
+    width: 100%;
+    margin: 200px auto 80px;
+    padding: 0 30px;
+}
+
+.entry-content a, .entry-content meta, .entry-content p {
+    flex: 50%;
+}
+
+.entry-content p {
+    font-family: $fourthFont;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.entry-content img.attachment-full.size-full.wp-post-image {
+    width: 100%;
+    height: unset;
+}
+
+.single-post .nav-links {
+    display: flex;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto 100px;
+    padding: 0 30px;
+    justify-content: space-between;
 }
